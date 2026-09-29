@@ -24,7 +24,7 @@ public class KafkaService {
 
     @KafkaListener(topics = "file-events")
     public void consume(FileProcess event) {
-        System.out.println("File received : " + event.getId() + " - " + event.getFileName());
+        System.out.println("File received: " + event.getId() + " - " + event.getFileName());
     }
 
     @KafkaListener(topics = "file-events", groupId = "fdfe")
